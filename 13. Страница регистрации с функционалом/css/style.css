@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: NunitoBold;
+    src: url(../font/NunitoBold.ttf);
+}
+
+@font-face {
+    font-family: NunitoExtraBold;
+    src: url(../font/NunitoExtraBold.ttf);
+}
+
+@font-face {
+    font-family: NunitoRegular;
+    src: url(../font/NunitoRegular.ttf);
+}
+
+
+.main {
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    max-width: 262px;
+    position: absolute;
+    padding-top: 27px;
+    left: 830px;
+}
+
+.container {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+}
+
+.main__form {
+    display: flex;
+    justify-content: end;
+    flex-wrap: wrap;
+    max-width: 460px;
+    padding: 194px 85px 0 0;
+}
+
+.form__main h1 {
+    font-family: NunitoExtraBold, sans-serif;
+    font-size: 36px;
+    color: #000000;
+    padding-bottom: 7px;
+}
+
+.form__main h3 {
+    font-family: NunitoRegular, sans-serif;
+    font-size: 22px;
+    line-height: 27px;
+    color: #636363;
+    padding-bottom: 42px;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px;
+    gap: 20px;
+}
+
+.text {
+    font-family: NunitoRegular, sans-serif;
+    font-size: 16px;
+    color: #c6c6c4;
+}
+
+input {
+    border: 1px solid #ffffff
+}
+
+.input {
+    border-bottom: 1px solid #c6c6c4;
+    cursor: pointer;
+    width: 452px;
+    height: 30px;
+    font-family: NunitoRegular, sans-serif;
+    font-size: 20px;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.form span {
+    font-family: NunitoRegular;
+    font-size: 16px;
+    color: #636363;
+}
+
+.link {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 390px;
+    padding-top: 40px;
+}
+
+.button {
+    width: 210px;
+    height: 70px;
+    font-family: NunitoRegular, sans-serif;
+    font-size: 20px;
+    opacity: 1;
+    border-radius: 40px;
+    background: #DD3142;
+    border: 1px solid #DD3142;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.link a {
+    font-family: NunitoRegular, sans-serif;
+    font-size: 16px;
+    color: #636363;
+    text-align: center;
+    padding-top: 44px;
+    padding-bottom: 191px;
+}
+
+.image__content {
+    width: 100%;
+    background: #f8f8fa ;
+    padding-top: 254px;
+}
+
+
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal__content {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.modal__btn {
+    margin-top: 20px;
+}
