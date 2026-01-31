@@ -28,7 +28,7 @@
     max-width: 262px;
     position: absolute;
     padding-top: 27px;
-    left: 830px;
+    left: calc(50% - 129px);
 }
 
 .container {
