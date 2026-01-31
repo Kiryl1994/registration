@@ -1,3 +1,5 @@
+   window.onload = function () {
+
     let form = document.querySelector('.form');
     let fullNameInput = document.getElementById('name');
     let usernameInput = document.getElementById('username');
@@ -9,7 +11,6 @@
     let title = document.querySelector('h1');
     let subtitle = document.querySelector('h3');
     let linkBlock = document.querySelector('.link a');
-
     /* ===== 2. Запрет цифр в Full Name ===== */
     fullNameInput.addEventListener('input', function() {
         fullNameInput.value = fullNameInput.value.replace(/[0-9]/g, '');
@@ -26,27 +27,33 @@
     });
 
     /* ===== 5. Submit формы ===== */
-    form.addEventListener('submit', function(event) {
-        event.preventDefault();
-
+    form.addEventListener('submit', function signUpHandler() {
+        signUpHandler.preventDefault();
+        
         // проверки пустых полей
-        if (!fullNameInput.value) {
+        if (!fullNameInput.value.trim()) {
             alert('Заполните поле Full Name');
             return;
         } 
-        if (!usernameInput.value) {
+        if (!usernameInput.value.trim()) {
             alert('Заполните поле Your username');
             return;
         }
-        if (!emailInput.value) {
-            alert('Заполните поле E-mail');
+        if (!emailInput.value.trim()) {
+          alert("Заполните поле E-mail");
+          return;
+        } else {
+          let emailPattern = /^\S+@\S+\.\S+$/;
+          if (!emailPattern.test(emailInput.value)) {
+            alert("Введите корректный E-mail");
             return;
+          }
         }
-        if (!passwordInput.value) {
+        if (!passwordInput.value.trim()) {
             alert('Заполните поле Password');
             return;
         }
-        if (!repeatPasswordInput.value) {
+        if (!repeatPasswordInput.value.trim()) {
             alert('Заполните поле Repeat Password');
             return;
         }
@@ -98,6 +105,7 @@
     });
 
     function switchToLogin() {
+        form.removeEventListener('submit', signUpHandler);
         title.textContent = 'Log in to the system';
         subtitle.remove();
 
@@ -124,4 +132,5 @@
         }
 
         alert(`Добро пожаловать, ${usernameInput.value}!`);
+
     }
